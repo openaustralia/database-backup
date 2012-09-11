@@ -1,0 +1,12 @@
+A simple script for dumping all the mysql databases on an Ubuntu box and backing them up with https://github.com/zertrin/duplicity-backup
+
+Going to be using this for the OpenAustralia Foundation
+
+Before you start:
+cp duplicity-backup.conf.example duplicity-backup.conf
+
+And set
+AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY
+PASSPHRASE
+in duplicity-backup.conf
