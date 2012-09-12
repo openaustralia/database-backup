@@ -2,6 +2,9 @@
 
 # Putting the database dumps into a similar place as automysqlbackup
 DUMP_DIR="/var/lib/database-backup"
+mkdir -p $DUMP_DIR
+# Created files should just readable (and writeable) by root
+umask 077 
 
 #MUSER=""
 #MPASS=""
