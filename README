@@ -1,4 +1,4 @@
-A simple script for dumping all the mysql databases on an Ubuntu box and backing them up with https://github.com/zertrin/duplicity-backup
+A simple script for dumping all the mysql and postgres databases on an Ubuntu box and backing them up to S3 with https://github.com/zertrin/duplicity-backup
 
 Going to be using this for the OpenAustralia Foundation
 
