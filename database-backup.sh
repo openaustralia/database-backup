@@ -17,7 +17,7 @@ MYSQLDUMP="$(which mysqldump)"
 # The databases to back up
 MYSQLDBS="$(mysql $MDEFAULTS -Bse 'show databases')"
 
-echo "Backing up databases to directory $DUMP_DIR"
+echo "Backing up MySQL databases to directory $DUMP_DIR..."
 for db in $MYSQLDBS
 do
   if [ "$db" != "information_schema" ]; then
@@ -25,6 +25,14 @@ do
     # We're not compressing these because the backup script proper will do that
     $MYSQLDUMP $MDEFAULTS $db > $DUMP_DIR/mysql-$db
   fi
+done
+
+echo "Backing up Postgres databases to directory $DUMP_DIR..."
+PGDBS="$(psql -qAt -c 'select datname from pg_database where datallowconn' postgres)"
+for db in $PGDBS
+do
+  echo $db
+  pg_dump $db > $DUMP_DIR/pg-$db
 done
 
 echo "Now transferring backups to S3..."
