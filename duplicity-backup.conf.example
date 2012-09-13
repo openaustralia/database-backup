@@ -104,7 +104,8 @@ DEST="s3+http://oaf-backups/kedumba/"
 #        )
 #
 # Simpler example with one location:
-INCLIST=( "/var/lib/database-backup" ) 
+INCLIST=( "/var/lib/database-backup" \
+          "/srv/www/alaveteli_staging/shared/files" ) 
 
 # EXCLUDE LIST OF DIRECTORIES
 # Even though I am being specific about what I want to include,
@@ -145,7 +146,7 @@ CLEAN_UP_VARIABLE="2"
 
 LOGDIR="/var/log/database-backup/"
 LOG_FILE="duplicity-`date +%Y-%m-%d_%H-%M`.txt"
-LOG_FILE_OWNER="deploy:deploy"
+LOG_FILE_OWNER="root:root"
 VERBOSITY="-v3"
 
 # EMAIL ALERT (*thanks: rmarescu*)
