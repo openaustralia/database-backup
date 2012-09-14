@@ -156,8 +156,7 @@ VERBOSITY="-v3"
 # If no value is provided for the subject, the following value will be
 # used by default: "duplicity-backup Alert ${LOG_FILE}"
 # MTA used: mailx
-#EMAIL="admin@example.com"
-EMAIL_TO=
+EMAIL_TO="web-administrators@openaustraliafoundation.org.au"
 EMAIL_FROM=
 EMAIL_SUBJECT=
 
