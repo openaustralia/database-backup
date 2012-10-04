@@ -17,6 +17,10 @@ MYSQLDUMP="$(which mysqldump)"
 # The databases to back up
 MYSQLDBS="$(mysql $MDEFAULTS -Bse 'show databases')"
 
+# Slightly hacky way of getting the directory that this script is in
+# without depending on the current working directory being set
+this_dir=$(dirname $(readlink -f $0))
+
 echo "Backing up MySQL databases to directory $DUMP_DIR..."
 for db in $MYSQLDBS
 do
@@ -37,4 +41,4 @@ done
 
 echo "Now transferring backups to S3..."
 # Now do the actual backup (with the backup configuration here)
-./duplicity-backup.sh --backup
+$this_dir/duplicity-backup.sh --backup
