@@ -105,7 +105,7 @@ DEST="s3+http://oaf-backups/kedumba/"
 #
 # Simpler example with one location:
 INCLIST=( "/var/lib/database-backup" \
-          "/srv/www/alaveteli_staging/shared/files" ) 
+          "/srv/www/test.righttoknow.org.au/shared/files" ) 
 
 # EXCLUDE LIST OF DIRECTORIES
 # Even though I am being specific about what I want to include,
