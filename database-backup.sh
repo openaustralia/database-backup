@@ -41,4 +41,4 @@ done
 
 echo "Now transferring backups to S3..."
 # Now do the actual backup (with the backup configuration here)
-$this_dir/duplicity-backup.sh --backup
+$this_dir/duplicity-backup.sh --config $this_dir/duplicity-backup.conf --backup
