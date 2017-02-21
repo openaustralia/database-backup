@@ -1,6 +1,14 @@
-A simple script for dumping all the mysql and postgres databases on an Ubuntu box and backing them up to S3 with https://github.com/zertrin/duplicity-backup
+# OpenAustralia Foundation Backups
 
-Going to be using this for the OpenAustralia Foundation
+This repository contains details of all of OpenAustralia Foundation's backups and how to restore them. It also contains a script we use on some servers to do database backups and store them on Amazon S3.
+
+## Backup and restore procedures
+
+TODO.
+
+## database-backup.sh
+
+This script is a little misleadingly named as it also backs up directories to S3. It started off life as a simple script for dumping all the MySQL and PostgreSQL databases on an Ubuntu box and backing them up to S3 with https://github.com/zertrin/duplicity-backup
 
 Before you start:
 cp duplicity-backup.conf.example duplicity-backup.conf
