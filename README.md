@@ -8,11 +8,13 @@ These are listed by server as that's probably what you're interested in when you
 
 ### kedumba
 
-TODO.
+[`database-backup.sh`](#database-backupsh) is cloned at `/home/matthewl/database-backup`. See below for restore procedures.
+
+`automysqlbackup` is also installed but should probably be removed to save disk space and standardise things.
 
 ### jamison
 
-TODO.
+[`database-backup.sh`](#database-backupsh) is cloned at `/home/henare/database-backup`. See below for restore procedures.
 
 ### morph.io
 
@@ -20,11 +22,15 @@ TODO.
 
 ### cuttlefish.oaf.org.au
 
-TODO.
+[`database-backup.sh`](#database-backupsh) is cloned at `/root/database-backup`. See below for restore procedures.
+
+[`database-backup.sh` is provisioned](https://github.com/openaustralia/cuttlefish/blob/master/provisioning/roles/backup/tasks/main.yml) using Ansible.
+
+Linode backups are also enabled for this server.
 
 ### forum.opengovernment.org.au
 
-TODO.
+Linode backups are enabled for this server.
 
 ## database-backup.sh
 
