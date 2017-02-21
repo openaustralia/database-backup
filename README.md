@@ -4,6 +4,26 @@ This repository contains details of all of OpenAustralia Foundation's backups an
 
 ## Backup and restore procedures
 
+These are listed by server as that's probably what you're interested in when you're looking at this document.
+
+### kedumba
+
+TODO.
+
+### jamison
+
+TODO.
+
+### morph.io
+
+TODO.
+
+### cuttlefish.oaf.org.au
+
+TODO.
+
+### forum.opengovernment.org.au
+
 TODO.
 
 ## database-backup.sh
