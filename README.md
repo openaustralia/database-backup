@@ -98,3 +98,7 @@ This script is a little misleadingly named as it also backs up directories to S3
 MySQL databases are backed up using `mysqldump`. PostgreSQL databases are backed up using `pg_dump`. These create dump files that can be restored to their respective database.
 
 The process for doing so isn't documented here because there's a variety of ways you might want to do this, depending on the failure you're recovering from.
+
+## Copyright & License
+
+Copyright OpenAustralia Foundation Limited. Licensed under the Affero GPL. See LICENSE file for more details.
