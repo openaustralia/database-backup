@@ -30,7 +30,7 @@ Linode backups are also enabled for this server.
 
 ### forum.opengovernment.org.au
 
-Linode backups are enabled for this server.
+Linode backups are enabled for this server. Discourse is configured to backup locally daily.
 
 ## database-backup.sh
 
