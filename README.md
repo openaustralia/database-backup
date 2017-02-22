@@ -63,7 +63,7 @@ This script is a little misleadingly named as it also backs up directories to S3
 ./duplicity-backup.sh -s    # show all the backup sets in the archive
 ```
 
-### Restoring from backup
+### Restoring files from backup
 
 ```
 # Restore a specific file
@@ -72,3 +72,7 @@ This script is a little misleadingly named as it also backs up directories to S3
 # Restores the entire backup to [path]
 ./duplicity-backup.sh --restore [PATH]
 ```
+
+#### Restoring databases from dump files
+
+TODO: add documentation on how to restore MySQL and PostgreSQL databases after the dump files have been restored using the procedure above.
