@@ -18,7 +18,27 @@ These are listed by server as that's probably what you're interested in when you
 
 ### morph.io
 
-TODO.
+#### Backups
+
+MySQL is backed up locally using Xtrabackup.
+This is [provisioned using an Ansible role](https://github.com/openaustralia/morph/tree/master/provisioning/roles/backups).
+Xtrabackup [stores backups](https://github.com/openaustralia/morph/blob/master/provisioning/roles/backups/files/database-backup.sh) in `/backups/mysql/` and keeps a copy of the last 5 days of backups.
+
+The SQLite scraper databases and the local Xtrabackup files are backed up to S3 using [Duply](http://www.duply.net/wiki/index.php/Duply-documentation), which is a nice frontend to Duplicity. This is [configured using Ansible](https://github.com/openaustralia/morph/blob/master/provisioning/roles/morph-app/tasks/main.yml#L168-L186).
+
+#### Restoring
+
+There are 2 duply profiles, `mysql` and `sqlite`. You can restore from S3 with them as follows:
+
+```
+# Restore a specific [file] to [destination] from [profile] on [date]
+duply [profile] fetch [file] [destination] [date]
+
+# Restore the entire latest backup from [profile] to [destination]
+duply [profile] restore [destination]
+```
+
+TODO: Add documentation on how to restore Xtrabackup MySQL backups.
 
 ### cuttlefish.oaf.org.au
 
