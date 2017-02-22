@@ -73,6 +73,8 @@ This script is a little misleadingly named as it also backs up directories to S3
 ./duplicity-backup.sh --restore [PATH]
 ```
 
-#### Restoring databases from dump files
+#### Restoring databases
 
-TODO: add documentation on how to restore MySQL and PostgreSQL databases after the dump files have been restored using the procedure above.
+MySQL databases are backed up using `mysqldump`. PostgreSQL databases are backed up using `pg_dump`. These create dump files that can be restored to their respective database.
+
+The process for doing so isn't documented here because there's a variety of ways you might want to do this, depending on the failure you're recovering from.
