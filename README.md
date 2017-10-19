@@ -46,10 +46,6 @@ TODO: Add documentation on how to restore Xtrabackup MySQL backups.
 
 Linode backups are also enabled for this server.
 
-### forum.opengovernment.org.au
-
-Linode backups are enabled for this server. Discourse is configured to backup locally daily.
-
 ## database-backup.sh
 
 This script is a little misleadingly named as it also backs up directories to S3. It is a simple script for dumping all the MySQL and PostgreSQL databases on an Ubuntu box and backing them up, and any directories you choose, to S3 with https://github.com/zertrin/duplicity-backup
